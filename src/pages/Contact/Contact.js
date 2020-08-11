@@ -19,6 +19,12 @@ import Message from '../../components/Message/Message';
 
 const MESSAGE_COUNT = 8;
 
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+}
+
 class Contact extends React.Component {
     constructor(props) {
         super(props);
@@ -49,12 +55,21 @@ class Contact extends React.Component {
         }
         else {
             console.log("sending email");
-            emailjs.sendForm('gmail', 'template_B6pYTG0l', e.target, 'user_VMCUhafdlEu5TrJQC0nYE')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
+            const valueToSend = e.target;
+            // emailjs.sendForm('gmail', 'template_B6pYTG0l', e.target, 'user_VMCUhafdlEu5TrJQC0nYE')
+            // .then((result) => {
+            //     console.log(result.text);
+            // }, (error) => {
+            //     console.log(error.text);
+            // });
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: encode({ "form-name": "contact", valueToSend })
+            })
+            .then(() => console.log("sent"))
+            .catch(error => console.log(error));
+
             this.state.myMessages
             .push(<Message 
                     blue 
