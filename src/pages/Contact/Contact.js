@@ -55,15 +55,21 @@ class Contact extends React.Component {
         }
         else {
             console.log("sending email");
-            const valueToSend = e.target;
-            fetch("/success", {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: encode({ "form-name": "contact", ...this.state })
-            })
-            .then(() => console.log("sent"))
-            .catch(error => console.log(error));
-            e.preventDefault();
+            // const valueToSend = e.target;
+            emailjs.sendForm('gmail', 'template_B6pYTG0l', e.target, process.env.EMAIL_KEY)
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+            // fetch("/success", {
+            //     method: "POST",
+            //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            //     body: encode({ "form-name": "contact", ...this.state })
+            // })
+            // .then(() => console.log("sent"))
+            // .catch(error => console.log(error));
+            // e.preventDefault();
 
             this.state.myMessages
             .push(<Message 
