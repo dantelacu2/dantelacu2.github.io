@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.21f2dad7.chunk.css",
+    "main.js": "/static/js/main.4c14e86c.chunk.js",
+    "main.js.map": "/static/js/main.4c14e86c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
+    "static/css/2.f01c5455.chunk.css": "/static/css/2.f01c5455.chunk.css",
+    "static/js/2.57318be5.chunk.js": "/static/js/2.57318be5.chunk.js",
+    "static/js/2.57318be5.chunk.js.map": "/static/js/2.57318be5.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.7192edf143d108f9b97e8d930e749cb8.js": "/precache-manifest.7192edf143d108f9b97e8d930e749cb8.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.f01c5455.chunk.css.map": "/static/css/2.f01c5455.chunk.css.map",
+    "static/css/main.21f2dad7.chunk.css.map": "/static/css/main.21f2dad7.chunk.css.map",
+    "static/js/2.57318be5.chunk.js.LICENSE.txt": "/static/js/2.57318be5.chunk.js.LICENSE.txt",
+    "static/media/MongoLogo.png": "/static/media/MongoLogo.9c7e1f10.png",
+    "static/media/PythonLogo.png": "/static/media/PythonLogo.cc791bec.png",
+    "static/media/ReactLogo.png": "/static/media/ReactLogo.ee722475.png",
+    "static/media/masthead.scss": "/static/media/bird-cells-new.eee0b154.svg",
+    "static/media/me_avatar.png": "/static/media/me_avatar.7df73548.png",
+    "static/media/me_working.png": "/static/media/me_working.59585827.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.09b85ec0.js",
+    "static/css/2.f01c5455.chunk.css",
+    "static/js/2.57318be5.chunk.js",
+    "static/css/main.21f2dad7.chunk.css",
+    "static/js/main.4c14e86c.chunk.js"
+  ]
+}
