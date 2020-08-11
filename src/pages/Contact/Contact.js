@@ -56,19 +56,14 @@ class Contact extends React.Component {
         else {
             console.log("sending email");
             const valueToSend = e.target;
-            // emailjs.sendForm('gmail', 'template_B6pYTG0l', e.target, 'user_VMCUhafdlEu5TrJQC0nYE')
-            // .then((result) => {
-            //     console.log(result.text);
-            // }, (error) => {
-            //     console.log(error.text);
-            // });
-            fetch("/", {
+            fetch("/success", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: encode({ "form-name": "contact", valueToSend })
+                body: encode({ "form-name": "contact", ...this.state })
             })
             .then(() => console.log("sent"))
             .catch(error => console.log(error));
+            e.preventDefault();
 
             this.state.myMessages
             .push(<Message 
@@ -134,11 +129,11 @@ class Contact extends React.Component {
                 {this.state.messageSent ? <Message content="Thank you! Dante will get back to you soon."/> : <></>}
                 <div className={formClass}>
                     <hr className={classes.hr} />
-                    <Form id="myForm" onSubmit={this.handleSubmit} data-netlify="true">
+                    <form id="myForm" onSubmit={this.handleSubmit} netlify data-netlify="true">
                         <Form.Group>
                             <Form.Control className={classes.input} disabled={this.state.isDisabled} type="text" name="message" id="message" value={this.state.messageBody} onChange={this.handleChange} placeholder="Enter your message to Dante" />
                         </Form.Group>
-                    </Form>
+                    </form>
                 </div>
             </Container>
         );
