@@ -28,10 +28,8 @@ const About = () => {
                         Dante Lacuadra
                     </h2>
                     <p>I am a Harvard College student studying Computer Science with a minor in Economics. I also code.</p>
-                    <h5>Frontend</h5>
-                    <h5>Backend</h5>
                     <br/>
-                    <h2 className={classes.h2}>Skills</h2>
+                    <h2 className={classes.h2}>My skills</h2>
                     <img className={classes.imgLogo} src={JavaScriptLogo} />
                     <img className={classes.imgLogo} src={ReactLogo} />
                     <img className={classes.imgLogo}  src={PythonLogo} />
