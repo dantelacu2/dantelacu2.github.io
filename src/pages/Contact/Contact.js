@@ -55,13 +55,6 @@ class Contact extends React.Component {
         }
         else {
             console.log("sending email");
-            // const valueToSend = e.target;
-            // emailjs.sendForm('gmail', 'template_B6pYTG0l', e.target, process.env.EMAIL_KEY)
-            // .then((result) => {
-            //     console.log(result.text);
-            // }, (error) => {
-            //     console.log(error.text);
-            // });
             e.preventDefault();
             fetch("/", {
                 method: "POST",
@@ -133,6 +126,7 @@ class Contact extends React.Component {
                 })}
                 <br/>
                 {this.state.messageSent ? <Message content="Thank you! Dante will get back to you soon."/> : <></>}
+                {this.state.messageSent ? <Message content="Something went wrong, send Dante an email instead."/> : <></>}
                 <div className={formClass}>
                     <hr className={classes.hr} />
                     <form name="myForm" method="post" id="myForm" netlify-honeypot="bot-field" onSubmit={this.handleSubmit} netlify data-netlify="true">

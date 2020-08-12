@@ -27,7 +27,7 @@ const PortfolioCard = (props) => {
             <CardBody>
                 <CardTitle>{props.subtitle}</CardTitle>
                 <CardText>{props.description}</CardText>
-                <Button className={classes.btn} href={props.link}>View <ArrowForward/></Button>
+                <a href={props.link} target={props.target}><Button className={classes.btn}>View <ArrowForward/></Button></a>
             </CardBody>
             <CardFooter className="text-muted">{props.footer}</CardFooter>
         </Card>
