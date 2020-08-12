@@ -63,7 +63,7 @@ class Contact extends React.Component {
             //     console.log(error.text);
             // });
             e.preventDefault();
-            fetch("/success", {
+            fetch("/", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: encode({ "form-name": "contact", ...this.state })
@@ -135,7 +135,7 @@ class Contact extends React.Component {
                 {this.state.messageSent ? <Message content="Thank you! Dante will get back to you soon."/> : <></>}
                 <div className={formClass}>
                     <hr className={classes.hr} />
-                    <form name="myForm" id="myForm" netlify-honeypot="bot-field" onSubmit={this.handleSubmit} netlify data-netlify="true">
+                    <form name="myForm" method="post" id="myForm" netlify-honeypot="bot-field" onSubmit={this.handleSubmit} netlify data-netlify="true">
                         <Form.Group>
                             <input type="hidden" name="bot-field" />
                             <input type="hidden" name="form-name" value="contact" />
