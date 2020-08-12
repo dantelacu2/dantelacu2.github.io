@@ -135,11 +135,13 @@ class Contact extends React.Component {
                 {this.state.messageSent ? <Message content="Thank you! Dante will get back to you soon."/> : <></>}
                 <div className={formClass}>
                     <hr className={classes.hr} />
-                    <Form name="myForm" id="myForm" onSubmit={this.handleSubmit} netlify data-netlify="true">
+                    <form name="myForm" id="myForm" netlify-honeypot="bot-field" onSubmit={this.handleSubmit} netlify data-netlify="true">
                         <Form.Group>
+                            <input type="hidden" name="bot-field" />
+                            <input type="hidden" name="form-name" value="contact" />
                             <Form.Control className={classes.input} disabled={this.state.isDisabled} type="text" name="message" id="message" value={this.state.messageBody} onChange={this.handleChange} placeholder="Enter your message to Dante" />
                         </Form.Group>
-                    </Form>
+                    </form>
                 </div>
             </Container>
         );
