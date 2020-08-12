@@ -135,7 +135,7 @@ class Contact extends React.Component {
                 {this.state.messageSent ? <Message content="Thank you! Dante will get back to you soon."/> : <></>}
                 <div className={formClass}>
                     <hr className={classes.hr} />
-                    <form name="myForm" id="myForm" onSubmit={this.handleSubmit} netlify data-netlify="true">
+                    <form action="/success" method="POST" name="myForm" id="myForm" onSubmit={this.handleSubmit} netlify data-netlify="true">
                         <Form.Group>
                             <Form.Control className={classes.input} disabled={this.state.isDisabled} type="text" name="message" id="message" value={this.state.messageBody} onChange={this.handleChange} placeholder="Enter your message to Dante" />
                         </Form.Group>
