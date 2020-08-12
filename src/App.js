@@ -12,6 +12,8 @@ import Contact from './pages/Contact/Contact';
 import About from './pages/About/About';
 import ValideaCapital from './pages/ValideaCapital/ValideaCapital';
 import ChallengeCapital from './pages/ChallengeCapital/ChallengeCapital';
+import MarinRestaurants from './pages/MarinRestaurants/MarinRestaurants';
+
 
 function App() {
   return (
@@ -37,6 +39,9 @@ function App() {
             </Route>
             <Route exact path="/challenge-capital">
               <ChallengeCapital/>
+            </Route>
+            <Route exact path="/marin-restaurants">
+              <MarinRestaurants/>
             </Route>
           </Switch>
         </div>

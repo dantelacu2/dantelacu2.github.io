@@ -52,6 +52,7 @@ const Portfolio = () => {
                         subtitle="Full-stack site"
                         description="Aggregates 1,000 local restaurants closure status with takeout & delivery options. Scrapes, google uses yelp's API, and attempts to verify information on each restaurant's website."
                         footer="MongoDB, Express.js, React.js, Node.js"
+                        link="/marin-restaurants"
                     />
                 </Col>
                 <Col lg={3} md={12} sm={12}>
