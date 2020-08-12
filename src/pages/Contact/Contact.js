@@ -125,7 +125,7 @@ class Contact extends React.Component {
                     );
                 })}
                 <br/>
-                {this.state.messageSent ? <Message content="Thank you! Dante will get back to you soon."/> : <></>}
+                {this.state.messageSent ? <Message content="Thank you! Dante will get back to you soon."/> : <></>}<br/>
                 {this.state.messageSent ? <Message content="Something went wrong, send Dante an email instead."/> : <></>}
                 <div className={formClass}>
                     <hr className={classes.hr} />
