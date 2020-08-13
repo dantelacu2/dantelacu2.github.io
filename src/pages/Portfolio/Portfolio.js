@@ -35,6 +35,7 @@ const Portfolio = () => {
                         description="Created a React app to help achieve pre-seed funding for a healthcare startup. Worked with a designer and a team of backend developers."
                         link="#"
                         footer="React.js, Redux, Node.js"
+                        comingSoon={true}
                     />
                 </Col>
                 <Col lg={3} md={12} sm={12}>
